@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:sharedUserId="android.uid.system"
+          package="com.service.bluetooth">
+
+    <instrumentation
+            android:name="android.test.InstrumentationTestRunner"
+            android:targetPackage="com.njupt.junittest"/>
+
+    <application
+            android:allowBackup="true"
+            android:name=".AppMain"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher">
+        <uses-library android:name="android.test.runner"/>
+        <service
+                android:name=".ATService">
+            <intent-filter>
+                <action android:name="com.service.bluetooth.ATService"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
