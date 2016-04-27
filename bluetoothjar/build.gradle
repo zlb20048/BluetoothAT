@@ -37,9 +37,9 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-def siteUrl = 'https://github.com/daliyan/SwipeView'      // 项目的主页
-def gitUrl = 'https://github.com/daliyan/SwipeView.git'   // Git仓库的url
-group = "akiyama.swipe"
+def siteUrl = 'https://github.com/zlb20048/BluetoothAT'      // 项目的主页
+def gitUrl = 'https://github.com/zlb20048/BluetoothAT.git'   // Git仓库的url
+group = "smartauto.bluetooth"
 // 根节点添加
 install {
     repositories.mavenInstaller {
@@ -47,7 +47,7 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'swipeView For Android'
+                name 'bluetooth jar'
                 url siteUrl
                 licenses {
                     license {
@@ -57,9 +57,9 @@ install {
                 }
                 developers {
                     developer {
-                        id 'akiyama'
-                        name 'daliyan'
-                        email 'dali_yan@yeah.net'
+                        id 'smartauto'
+                        name 'zlb20048'
+                        email 'zlb20048@163.com'
                     }
                 }
                 scm {
@@ -100,7 +100,7 @@ javadoc {
         author true
         version true
         links "http://docs.oracle.com/javase/7/docs/api"
-        title "swipeJavaDoc"
+        title "bluetoothJavaDoc"
     }
 }
 
@@ -112,7 +112,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "swipeView"                // project name in jcenter
+        name = "BluetoothAT"                // project name in jcenter
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
